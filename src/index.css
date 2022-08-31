@@ -17,3 +17,10 @@ body {
 a {
   text-decoration: none;
 }
+
+
+@media (min-width: 800px) {
+    body{
+      font-size: 18px;
+    }
+}

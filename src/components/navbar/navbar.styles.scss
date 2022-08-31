@@ -28,6 +28,20 @@
         justify-content: space-around;
 
     }
+    .active{
+        position: relative;
+    }
+    .active::after{
+        z-index: -1;
+        position: absolute;
+        bottom: 2px;
+        border-radius: 2px;
+        content: '';
+        width: 120%;
+        transform: translatex(-10%);
+        height: 5px;
+        background-color: #457eff7d;
+    }
 }
 
 @media (min-width: 800px) {

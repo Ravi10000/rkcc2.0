@@ -3,7 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import CustomButton from "../custom-button/custom-button.component";
 import Modal from "../modal/modal.component";
-import { Link, HashLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -22,16 +22,16 @@ const Navbar = () => {
         </motion.p></Link>
       </div>
       <div className="right-section">
-        <Link to="/">
+        <NavLink to="/">
           <motion.p whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
             Home
           </motion.p>
-        </Link>
-        <Link to="/about">
+        </NavLink>
+        <NavLink to="/about">
           <motion.p whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
             About
           </motion.p>
-        </Link>
+        </NavLink>
           <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}

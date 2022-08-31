@@ -1,5 +1,5 @@
 .custom-button{
-    display: inline-block;
+    display: flex;
     background-color: #457EFF;
     color: #ffffff;
     border-radius: 50px;
@@ -14,9 +14,27 @@
         background-color: transparent;
         color: #457EFF;
     }
+    .loader{
+        display: inline-block;
+        margin: -3px 0 0 10px;
+        height: 20px;
+        width: 20px;
+        border: 2px solid transparent;
+        border-top-color: #fff;
+        border-right-color: #fff;
+        border-radius: 50px;
+        background-color: transparent;
+        animation: load .5s infinite linear;
+    }
 }
 
-
+@keyframes load {
+    from{
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 @media (hover:hover){
 }
 

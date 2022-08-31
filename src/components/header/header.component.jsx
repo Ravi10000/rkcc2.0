@@ -35,7 +35,7 @@ const Header = () => {
 
       <AnimatePresence
         initial={false}
-        exitBeforeEnter={true}
+        mode='wait'
         onExitComplete={() => null}
       >
         {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}

@@ -15,9 +15,14 @@
         font-family: 'Poppins';
         color: #7C8AA9;
     }
-    .content-container{
-        overflow: hidden;
-    }
+
+    // .form-and-comments{
+    //     // outline: 2px solid red;
+    //     display: flex;
+    //     flex-direction: column;
+    //     // align-items: center;
+    //     // text-align: center;
+    // }
 }
 
 @media (min-width: 800px){
@@ -29,5 +34,14 @@
         .question, .answer{
             margin-left: 25%;
         }
+        // .form-comments-container{
+        //     display: flex;
+        //     justify-content: center;
+        //     .form-and-comments{
+        //         width: 80%;
+        //         display: grid;
+        //         grid-template-columns: 1fr 1fr;
+        //     }
+        // }
     }
 }
