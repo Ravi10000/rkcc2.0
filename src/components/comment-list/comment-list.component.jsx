@@ -33,7 +33,7 @@ export default function CommentList() {
   return (
     <div className="comment-list" id="comment-list"> 
       <div className="subheading-container">
-        <SubHeading>Comments</SubHeading>
+        <SubHeading highlight="#4C4EF999">Comments</SubHeading>
       </div>
       <div className="comments-container">
         {comments?.map((comment, idx) => (

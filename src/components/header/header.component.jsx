@@ -12,16 +12,27 @@ const Header = () => {
   const open = () => setModalOpen(true);
   return (
     <>
-      <div className="header">
+      <header className="header">
         <div className="container">
           <div className="header-text">
-            <div className="title">
+            <hgroup className="title">
               <h1>RK COOL CENTER</h1>
               <div className="cut"></div>
-            </div>
-            <p className="subtitle">AC & Refrigerator Solutions</p>
+            </hgroup>
+            <h2 className="subtitle">AC & Refrigerator Solutions</h2>
           </div>
-          <img src="./hero.png" alt="hero" loading="lazy"/>
+          <motion.img
+            src="./hero.png"
+            alt="hero"
+            // initial={{ rotate: 0 }}
+            // whileInView={{ rotate: [0, -5, 5, 0] }}
+            // transition={{
+            //   duration: 1,
+            //   delay: 0.5,
+            //   type: "spring",
+            //   bounce: 1,
+            // }}
+          />
         </div>
         <div className="contact-btn">
           <CustomButton handleClick={() => (modalOpen ? close() : open())}>
@@ -31,13 +42,9 @@ const Header = () => {
         <div className="msg" id="before-services">
           <p>We provide our services across Delhi NCR only</p>
         </div>
-      </div>
+      </header>
 
-      <AnimatePresence
-        initial={false}
-        mode='wait'
-        onExitComplete={() => null}
-      >
+      <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
         {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
       </AnimatePresence>
     </>

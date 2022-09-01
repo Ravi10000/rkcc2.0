@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="subheading-container">
-        <SubHeading color="white">Contacts</SubHeading>
+        <SubHeading color="white" highlight="#ffffff62">Contacts</SubHeading>
       </div>
       <div className="content-container">
         <div className="address-container">

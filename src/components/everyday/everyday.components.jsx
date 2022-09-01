@@ -4,7 +4,7 @@ import SubHeading from "../subheading/subheading.component";
 
 export default function EverydaySection() {
   return (
-    <div className="everyday-section">
+    <section className="everyday-section">
       <div className="subheading-container">
         <SubHeading highlight={"#FE706299"}>Contact Us Anytime</SubHeading>
       </div>
@@ -32,6 +32,6 @@ export default function EverydaySection() {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

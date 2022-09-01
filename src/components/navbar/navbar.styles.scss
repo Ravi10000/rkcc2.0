@@ -41,6 +41,20 @@
         transform: translatex(-10%);
         height: 5px;
         background-color: #457eff7d;
+        animation: move .3s ease-in-out;
+    }
+}
+
+    
+@keyframes move {
+    0%{
+        transform: translateX(-100%);
+    }
+    80%{
+        transform: translateX(10%);
+    }
+    100%{
+        transform: translateX(0);
     }
 }
 

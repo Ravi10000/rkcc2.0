@@ -7,7 +7,7 @@ import SubHeading from "../subheading/subheading.component";
 const CertifiedSection = () => {
   const containerRef = useRef(null);
   return (
-    <div className="certified-section" ref={containerRef}>
+    <section className="certified-section" ref={containerRef}>
       <div className="subheading-container">
         <SubHeading highlight={"#53C178BF"}>
           Certified and Trained Technicians
@@ -55,7 +55,7 @@ const CertifiedSection = () => {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -11,7 +11,7 @@ const Navbar = () => {
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <div className="left-section">
         <Link to='/'>
         <motion.p
@@ -53,7 +53,7 @@ const Navbar = () => {
       >
         {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
       </AnimatePresence>
-    </div>
+    </nav>
   );
 };
 

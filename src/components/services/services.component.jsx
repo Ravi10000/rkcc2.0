@@ -3,7 +3,7 @@ import SubHeading from "../subheading/subheading.component";
 
 const Services = () => {
   return (
-    <div className="services">
+    <section className="services">
       <div className="subheading-container" id="services">
         <SubHeading>Services</SubHeading>
       </div>
@@ -40,7 +40,7 @@ const Services = () => {
           Quality service available at your doorstep with just one phone call
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

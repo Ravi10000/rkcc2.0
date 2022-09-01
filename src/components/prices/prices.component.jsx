@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const PricesSection = () => {
   return (
-    <div className="prices-section">
+    <section className="prices-section">
       <div className="subheading-container">
         <SubHeading highlight={"#FFC10099"}>Reasonable Pricing</SubHeading>
       </div>
@@ -46,7 +46,7 @@ const PricesSection = () => {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

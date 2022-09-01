@@ -3,7 +3,7 @@ import SubHeading from "../subheading/subheading.component";
 
 export default function Address() {
   return (
-    <div className="address">
+    <section className="address">
       <div className="subheading-container">
         <SubHeading highlight={"#7C8AA9BF"}>Where To Locate Us</SubHeading>
       </div>
@@ -32,6 +32,6 @@ export default function Address() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
