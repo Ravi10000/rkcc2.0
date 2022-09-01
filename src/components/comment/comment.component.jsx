@@ -1,11 +1,14 @@
-import './comment.styles.scss'
+import "./comment.styles.scss";
 
-export default function Comment({comment}) {
-    const {name, message} = comment
+export default function Comment({ comment }) {
+  const { name, message } = comment;
   return (
-    <div className='comment'>
+    <div className="comment">
+      <div className="user-name">
+        <img src="./user.png" alt="user" />
         <h3>{name}</h3>
-        <p>{message}</p>
+      </div>
+      <p>{message}</p>
     </div>
-  )
+  );
 }

@@ -1,11 +1,31 @@
 .contact-form {
     margin-top: 50px;
+    width: 90%;
+    max-width: 400px;
+    // .subheading-container {
+    //     display: inline-block;
+    //     margin-left: 25px;
+    // }
 
-    .subheading-container {
-        display: inline-block;
-        margin-left: 25px;
+    fieldset {
+        border: 2px solid #4c4ff956;
+        border-radius: 20px;
+        padding-bottom: 20px;
+        legend{
+            position: relative;
+            left: -10px;
+            font-family: 'Josefin sans';
+            font-size: 1.5rem;
+            color: #4c4ff9;
+            font-weight: 600;
+            border: 2px solid #4C4EF999;
+            border-radius: 10px;
+            padding: 10px 20px;
+            background-color: #fff;
+        }
+        // padding: 0 0px 10px 0px;
     }
-        
+
     .inputs-container {
         display: flex;
         flex-direction: column;
@@ -14,22 +34,27 @@
         .name,
         .contact,
         .message {
-            width: Clamp(200px, 90%, 500px);
+            // width: Clamp(200px, 90%, 500px);
+            width: 90%;
+            max-width: 350px;
             position: relative;
-            p{
+
+            .error {
                 position: absolute;
                 bottom: -20px;
                 left: 10px;
                 font-size: .9rem;
-                color: #FF5645;
+                color: rgba(197, 110, 34, 0.814);
             }
         }
     }
-    .submit-btn-container{
-        margin-top: 25px;
+
+    .submit-btn-container {
+        margin-top: 5px;
         display: flex;
         justify-content: center;
-        .submit-btn{
+
+        .submit-btn {
             width: Clamp(200px, 90%, 500px);
             display: flex;
             justify-content: flex-end;

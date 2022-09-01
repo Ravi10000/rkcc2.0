@@ -36,54 +36,60 @@ export default function ContactForm() {
   return (
     <div className="contact-form">
       <form noValidate onSubmit={handleSubmit(submitForm)}>
-        <div className="subheading-container">
+        {/* <div className="subheading-container">
           <SubHeading highlight="#4C4EF999">Ask Queries Here</SubHeading>
-        </div>
-        <div className="inputs-container">
-          <div className="name">
-            <CustomInput
-              label="your full name"
-              register={{
-                ...register("name", { required: "provide your name" }),
-              }}
-              name="name"
-              required
-            />
-            <p>{errors?.name?.message}</p>
+        </div> */}
+        <fieldset>
+          <legend>
+          Ask Queries Here
+            {/* <SubHeading highlight="#4C4EF999">Ask Queries Here</SubHeading> */}
+          </legend>
+          <div className="inputs-container">
+            <div className="name">
+              <CustomInput
+                label="your full name"
+                register={{
+                  ...register("name", { required: "provide your name" }),
+                }}
+                name="name"
+                required
+              />
+              <p className="error">{errors?.name?.message}</p>
+            </div>
+            <div className="contact">
+              <CustomInput
+                label="your email/phone number"
+                register={{
+                  ...register("contact", {
+                    required: "provide your email/phone number",
+                  }),
+                }}
+                name="contact"
+                required
+              />
+              <p className="error">{errors?.contact?.message}</p>
+            </div>
+            <div className="message">
+              <CustomTextarea
+                label="message/comment"
+                register={{
+                  ...register("message", {
+                    required: "write your message here",
+                  }),
+                }}
+                name="message"
+              />
+              <p className="error">{errors?.message?.message}</p>
+            </div>
           </div>
-          <div className="contact">
-            <CustomInput
-              label="your email/phone number"
-              register={{
-                ...register("contact", {
-                  required: "provide your email/phone number",
-                }),
-              }}
-              name="contact"
-              required
-            />
-            <p>{errors?.contact?.message}</p>
+          <div className="submit-btn-container">
+            <div className="submit-btn">
+              <CustomButton backgroundColor="#4C4EF9" isLoading={isLoading}>
+                Submit
+              </CustomButton>
+            </div>
           </div>
-          <div className="message">
-            <CustomTextarea
-              label="message/comment"
-              register={{
-                ...register("message", {
-                  required: "write your message here",
-                }),
-              }}
-              name="message"
-            />
-            <p>{errors?.message?.message}</p>
-          </div>
-        </div>
-        <div className="submit-btn-container">
-          <div className="submit-btn">
-            <CustomButton backgroundColor="#4C4EF9" isLoading={isLoading}>
-              Submit
-            </CustomButton>
-          </div>
-        </div>
+        </fieldset>
       </form>
     </div>
   );

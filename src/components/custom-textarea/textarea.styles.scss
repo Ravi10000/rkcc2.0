@@ -16,17 +16,18 @@
         padding: 10px 10px;
         outline: none;
 
-        &:focus{
-        box-shadow: 0px 1px 4px #4c4ff982;
-        }
         &:focus, &:valid{
-            border-color: #4C4EF9;
+            // border-color: #4c4ff982;
             ~label{
                 color: #4C4EF9;
                 font-weight: 600;
                 transform: translatey(-55px);
                 font-size: .9rem;
             }
+        }
+        &:focus{
+        box-shadow: 0px 1px 4px #4c4ff982;
+        border-color: #4C4EF9;
         }
     }
     label{

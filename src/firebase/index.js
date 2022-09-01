@@ -25,34 +25,27 @@ const db = getFirestore();
 const colRef = collection(db, "comments");
 let documentSnapshots = [];
 
-export async function getLatestComments(count) {
+export async function getLatestComments({count}) {
   const q = query(colRef, orderBy("createdAt", "desc"), limit(count));
-  // get data
   const snapshot = await getDocs(q);
-  documentSnapshots = snapshot;
-  const comments = [];
-  await snapshot.docs.forEach((doc) => {
-    comments.push({ ...doc.data() });
-  });
-  return comments;
+  return snapshot;
 }
 
-export async function getMoreComments(count) {
-  if(!documentSnapshots?.docs?.length) return null
-  const lastVisible = documentSnapshots.docs[documentSnapshots.docs.length - 1];
+export async function getMoreComments({count, lastComment}) {
+  // const lastVisible = documentSnapshots.docs[documentSnapshots.docs.length - 1];
   const q = query(
     colRef,
     orderBy("createdAt", "desc"),
-    startAfter(lastVisible),
+    startAfter(lastComment),
     limit(count)
   );
   const snapshot = await getDocs(q);
-  documentSnapshots = {...documentSnapshots, ...snapshot}
-  const comments = [];
-  await snapshot.docs.forEach((doc) => {
-    comments.push({ ...doc.data() });
-  });
-  return comments;
+  // documentSnapshots = {...documentSnapshots, ...snapshot}
+  // const comments = [];
+  // await snapshot.docs.forEach((doc) => {
+  //   comments.push({ ...doc.data() });
+  // });
+  return snapshot;
 }
 
 export function sendMessage(name, contact, message) {
